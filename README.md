@@ -4,5 +4,5 @@
 
 Team Members:
 Greyson Fields
-Josh Rosen
+John Rosen
 Tianhao Yao
