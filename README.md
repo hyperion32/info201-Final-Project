@@ -3,6 +3,6 @@
 
 
 Team Members:
-Greyson Fields
-John Rosen
-Tianhao Yao
+- Greyson Fields
+- John Rosen
+- Tianhao Yao
