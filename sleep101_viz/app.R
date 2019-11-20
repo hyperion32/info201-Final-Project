@@ -13,7 +13,7 @@ source("../source/analysis.R")
 ui <- fluidPage(
    
    # Application title
-   titlePanel("Viz 1"),
+   titlePanel("Analysis of the Factors that Affect Sleep"),
    
    # Sidebar with a slider input for number of bins 
    sidebarLayout(
@@ -26,8 +26,8 @@ ui <- fluidPage(
         
      # ),
      # sidebarPanel(
-        selectInput('xCol', 'X', names(df_graph)),
-        selectInput('yCol', 'Y', names(df_graph))),
+        selectInput('xCol', 'Choose First Variable', names(df_graph)),
+        selectInput('yCol', 'Choose Second Variable', names(df_graph))),
       
       mainPanel(
         # plotOutput("distPlot"),
@@ -51,7 +51,7 @@ server <- function(input, output, session) {
   # })
    df_new <- reactive({df_graph[, c(input$xCol, input$yCol)]})
    output$scatterPlot <- renderPlot({plot(df_new(), pch = 20, cex = 2, col = "Black",
-                                           main = "Left Empty")})
+                                           main = "Analysis")})
   
 }
 
