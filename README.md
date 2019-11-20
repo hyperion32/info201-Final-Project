@@ -8,4 +8,5 @@ Team Members:
 - Tianhao Yao
 
 
-[Project Proposal](https://github.com/hyperion32/info201-Final-Project/wiki)
+[Project Proposal](https://github.com/hyperion32/info201-Final-Project/wiki/Project-Proposal)
+[Technical Report](https://github.com/hyperion32/info201-Final-Project/wiki/Technical-Report)
