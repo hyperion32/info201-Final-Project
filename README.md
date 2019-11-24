@@ -11,3 +11,5 @@ Team Members:
 [Project Proposal](https://github.com/hyperion32/info201-Final-Project/wiki/Project-Proposal)
 
 [Technical Report](https://github.com/hyperion32/info201-Final-Project/wiki/Technical-Report)
+
+[Shiny App](https://gfields32.shinyapps.io/info201-Final-Project/)
