@@ -3,6 +3,9 @@ df <- read.csv("data/hchs/datasets/hchs-sol-sueno-ancillary-dataset-0.5.0.csv")
 
 df_personal <- read.csv("data/hchs/datasets/hchs-sol-baseline-dataset-0.5.0.csv")
 
+df_sleep <- read.csv("data/sleep_data_analysis.csv", stringsAsFactors = F)
+
+
 df_personal_select <- df_personal %>% 
   select('Patient ID' = pid, 'Physical activity level (low, mod, high)' = GPAQ_LEVEL, 
          'Total physical activity (min/week)' = GPAQ_MV_WEEK, 
