@@ -15,31 +15,27 @@ page_one <- tabPanel(
      There might be some tension between these cultures and data that
      doesn't support long workdays."),
   h2("Research Questions"),
-  p("1. What variables affect sleep quality and duration the most?"),
-  p("2. How do socioeconomic factors affect sleep quality and duration?"),
+  p("1. How does physical activity affect sleep?"),
+  p("2. How does overall health (BMI and age) affect sleep?"),
 )
 
 page_two <- tabPanel(
-  "Visualization1",
+  "Physical Activity vs Sleep",
   ui <- fluidPage(
-    titlePanel("Analysis of the Factors that Affect Sleep"),
+    titlePanel("How Does Physical Activity Affect Sleep?"),
     sidebarLayout(
       sidebarPanel(
-        #sliderInput("n_breaks",
-        #            "Number of bins:",
-        #             min = 10,
-        #             max = 50,
-        #             value = 30)
-        
-        # ),
-        # sidebarPanel(
-        selectInput('xCol', 'Choose First Factor', names(df_graph)),
-        selectInput('yCol', 'Choose Second Factor', names(df_graph))
+        selectInput('xCol', 'Choose Physical Activity Component', names(limited_var_x)),
+        selectInput('yCol', 'Choose Sleep Component', names(limited_var_y))
       ),
       mainPanel(
-        # plotOutput("distPlot"),
         plotOutput("scatterPlot"),
-        p("add description of the visualization")
+        p("This visualization compares physical activity components to the quality
+          of sleep a person received. The data is pulled from the HCHS database that
+          we received access to for this project. In the sidebar selection, there are
+          three components that can be selected for physical activity. Also, there are
+          three components that can be selected for sleep quality. From there, you can
+          analyze the histogram based on the components that have been selected.")
       ),
     )
   )
@@ -48,22 +44,13 @@ page_two <- tabPanel(
 page_three <- tabPanel(
   "Visualization2",
   ui <- fluidPage(
-    titlePanel("Analysis of the Factors that Affect Sleep"),
+    titlePanel("Title"),
     sidebarLayout(
       sidebarPanel(
-        #sliderInput("n_breaks",
-        #            "Number of bins:",
-        #             min = 10,
-        #             max = 50,
-        #             value = 30)
-        
-        # ),
-        # sidebarPanel(
-        selectInput('xCol', 'Choose First Factor', names(df_graph)),
-        selectInput('yCol', 'Choose Second Factor', names(df_graph))
+        sliderInput("age", "Age", 0, 100, c(0,100), step = 5, sep = ""),
+        sliderInput("bmi", "BMI", 0, 50, c(0,50), step = 0.5, sep = "")
       ),
       mainPanel(
-        # plotOutput("distPlot"),
         plotOutput("scatterPlot2"),
         p("add description of the visualization")
       ),
