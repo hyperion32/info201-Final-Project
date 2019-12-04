@@ -21,7 +21,7 @@ server <- function(input, output, session) {
       select(age, sleep_dur_wkday)})
 
   # create the second visualization
-  output$scatterPlot2 <- renderPlot(ggplot(df_new_2(), 
+  output$hist <- renderPlot(ggplot(df_new_2(), 
                                            aes(x=sleep_dur_wkday))
                                     + geom_histogram(binwidth = 1)
                                     + xlab("Sleep Duration"))
